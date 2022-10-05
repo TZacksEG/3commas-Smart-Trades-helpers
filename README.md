@@ -64,7 +64,7 @@ The configuration file for Smart_Trade_fixed_TPs has the following settings:
 * **tgram-api-id** - your telegram API id. [how to get Telegram App/HASH?]([https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/How-to-get-exchange-account-number-from-3commas](https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/Get-Telegram-APP-ID-and-HASH))
 * **tgram-api-hash** - your telegram API hash.
 * **tgram-channel** - name of the chat channel to monitor.
-* **notifications** - set to true to enable notifications. (default = False)
+* **notifications** - set to true to enable notifications. (default = False) [How to setup telegram Notifications](https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/How-to-setup-telegram-Notifications)
 * **notify-urls** - one or a list of apprise notify urls, each in " " seperated with commas. See [Apprise website](https://github.com/caronc/apprise) for more information.
 
 

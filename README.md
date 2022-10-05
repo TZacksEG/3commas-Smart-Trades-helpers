@@ -53,6 +53,13 @@ The configuration file for Smart_Trade_fixed_TPs has the following settings:
 
 * **3c-apisecret** - your 3Commas API key secret value.
 * **accounts** = your account/accounts number [how to get the account number?](https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/How-to-get-exchange-account-number-from-3commas)
+* **risk-of-trade** - the % of your account balance that you will risk for each trade - default is 1%
+* **Tp1** - % of your 1st TP
+* **Tp2** - % of your 2nd TP
+* **Tp3** - % of your 3rd TP
+* **Tp4** - % of your 4th TP
+* **Tp5** - % of your 5th TP
+* **leverage** - are you going to use leverage Trading ? then what is your lev maybe 5 or 10 or 100? default is 1 for SPOT Trading
 
 
 

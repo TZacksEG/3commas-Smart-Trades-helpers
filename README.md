@@ -101,9 +101,18 @@ same data as the previous script except the following
 * **break_even** = True  - when reaching the first TP , do you want to move your stop loss to Breakeven ?! True for yes or False for NO
 
 
+# Smart_Trade_with_RR FORMAT 
+
+`LONG/SHORT
+
+COIN
+
+entry price ( limit ) 
+
+stoploss`
 
 
-
+![image](https://user-images.githubusercontent.com/106902748/194100563-9fc584ce-0a27-443b-9f5c-57137ee61276.png)
 
 
 

@@ -15,7 +15,8 @@ risk per trade = 1 % = $200
 
 assuming you entering a BTC long position with 5% stoploss 
 
-**Your Position value ** will be calculated in that way ( risk per trade / Stoploss % ) so its 200/5% = $4,000
+**Your Position value ** 
+will be calculated in that way ( risk per trade / Stoploss % ) so its 200/5% = $4,000
 
 
 BTC would have to drop 5% in price to lose the **Risk Per trade value** which in our case is 1% of the capital or $200

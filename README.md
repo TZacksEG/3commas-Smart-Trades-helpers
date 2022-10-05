@@ -127,6 +127,5 @@ stoploss`
 ![image](https://user-images.githubusercontent.com/106902748/194100563-9fc584ce-0a27-443b-9f5c-57137ee61276.png)
 
 
-
-
+**You can use CLOSE to close/Panic Sell all your SMART trades**
 

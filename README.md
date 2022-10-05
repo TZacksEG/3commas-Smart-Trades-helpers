@@ -87,8 +87,7 @@ stoploss`
 
 ![image](https://user-images.githubusercontent.com/106902748/194093614-9ef1983f-752e-4128-b039-0d8733bc7bb8.png)
 
-You can use CLOSE to close/Panic Sell  all your SMART trades
-
+**You can use CLOSE to close/Panic Sell  all your SMART trades**
 **********************
 **********************
 # Smart_Trade_with_RR ( RISK and REWARD )

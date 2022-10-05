@@ -34,7 +34,7 @@ The Take profit matter has 2 options
 
 **Default RR is 1 to 2.4 RR so you lose 1 dollar to earn $2.4**
 
-**BOTH OF the script will Breakeven when first Tp is Reached to secure your Profit **
+**BOTH OF the script will Breakeven when first Tp is Reached to secure your Profit**
 
 there are 2 different scripts 
 * **Smart_Trade_fixed_TPs.py** buys or sell at **MARKET PRICE**

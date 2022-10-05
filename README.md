@@ -6,7 +6,7 @@ therefore, these Scripts were created
 ******************
 # How it works?
 I have designed these scripts to risk a certain amount per trade depend on the Trading capital and also adjust the position value depend on your stoploss 
-works for spot and futures **ONLY USDT Market** also has multi Tps or Risk-Reward Ratio
+works for spot and futures **ONLY USDT Market** also has multi Tps or Risk-Reward Ratio and Breakeven when first Tp is Reached to secure your Profit .
 
 # Explaination 
 
@@ -40,3 +40,30 @@ there are 2 different scripts
 * **Smart_Trade_with_RR.py**
 
 # Smart_Trade_fixed_TPs
+ when you run it , it will ask fo data as shown below 
+ ![image](https://user-images.githubusercontent.com/106902748/194078254-f2db452d-9c09-49bf-8cb2-e92f399d61f0.png)
+ 
+**Configuration**
+The configuration file for Smart_Trade_fixed_TPs has the following settings:
+
+* **timezone** - timezone. (default is 'Africa/Cairo')
+* **debug** - set to true to enable debug logging to file. (default is False)
+* **logrotate** - number of days to keep logs. (default = 7)
+* **3c-apikey** - your 3Commas API key value.
+* **3c-apisecret** - your 3Commas API key secret value.
+* **accounts** = your account/accounts number 
+
+
+
+
+
+
+
+
+
+
+lc-apikey - your LunarCrush API key value.
+
+notifications - set to true to enable notifications. (default = False)
+
+notify-urls - one or a list of apprise notify urls, each in " " seperated with commas. See Apprise website for more information.

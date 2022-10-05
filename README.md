@@ -51,7 +51,7 @@ The configuration file for Smart_Trade_fixed_TPs has the following settings:
 * **logrotate** - number of days to keep logs. (default = 7)
 * **3c-apikey** - your 3Commas API key value.
 * **3c-apisecret** - your 3Commas API key secret value.
-* **accounts** = your account/accounts number 
+* **accounts** = your account/accounts number [how to get the account number?](https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/How-to-get-exchange-account-number-from-3commas)
 
 
 

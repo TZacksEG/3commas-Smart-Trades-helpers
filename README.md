@@ -8,7 +8,7 @@ therefore, these Scripts were created
 I have designed these scripts to risk a certain amount per trade depend on the Trading capital and also adjust the position value depend on your stoploss 
 works for spot and futures **ONLY USDT Market**  ( LONG and SHORT ) also has multi Tps or Risk-Reward Ratio and Breakeven when first Tp is Reached to secure your Profit .
 
-# Explaination 
+# Explanation  
 
 **capital** = $20K
 
@@ -91,7 +91,7 @@ stoploss`
 **********************
 **********************
 # Smart_Trade_with_RR ( RISK and REWARD )
-**Risk-Reward Ratio** , it calculate your profit automaticlly using the value of the stoploss used in the trade ..
+**Risk-Reward Ratio** , it calculate your profit automatically using the value of the stoploss used in the trade ..
 
 **Default RR is 1 to 2.4 RR so you lose 1 dollar to earn $2.4**
 

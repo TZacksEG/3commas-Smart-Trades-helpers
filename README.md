@@ -73,6 +73,7 @@ The configuration file for Smart_Trade_fixed_TPs has the following settings:
 `LONG/SHORT
 
 COIN
+
 stoploss`
 
 ![image](https://user-images.githubusercontent.com/106902748/194093614-9ef1983f-752e-4128-b039-0d8733bc7bb8.png)

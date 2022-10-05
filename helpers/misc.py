@@ -6,7 +6,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-from constants.pair import PAIREXCLUDE_EXT
+PAIREXCLUDE_EXT = "pairexclude"
 
 
 def wait_time_interval(logger, notification, time_interval, notify=True):

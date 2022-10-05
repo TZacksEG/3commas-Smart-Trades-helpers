@@ -9,16 +9,11 @@ I have designed these scripts to risk a certain amount per trade depend on your 
 so your risk amount per trade stays the same , no matter how small/big stoploss you use .
 
 for example :
-capital = $20K
+capital = $20K\n
 risk per trade = 1 % = $200
 
 assuming you entering a BTC long position with 5% stoploss 
 you need BTC to drop 5% in price to lose the **Risk Per trade value**
-
-
-
-
-
 
 
 

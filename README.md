@@ -84,6 +84,10 @@ You can use CLOSE to close/Panic Sell  all your SMART trades
 **********************
 **********************
 # Smart_Trade_with_RR ( RISK and REWARD )
+**Risk-Reward Ratio** , it calculate your profit automaticlly using the value of the stoploss used in the trade ..
+
+**Default RR is 1 to 2.4 RR so you lose 1 dollar to earn $2.4**
+
 once you run it via 
 python3 smart_trade_with_RR.py
 

@@ -29,9 +29,11 @@ BTC would have to drop 2% in price to lose the **Risk Per trade value** which is
 **
 
 The Take profit matter has 2 options 
-* **Fixed Tps** ( adjustable in the script ) you can set whatever % of tps you want exmple : 2% and 5% and 10% etc 
-* **Risk-Reward Ratio** , it calculate your profit automaticlly using the value of the stoploss used in the trade .. Default is 1 to 2.4 RR 
-so you lose 1 dollar to earn $2.4
+* **Fixed Tps** ( adjustable in the script ) you can set whatever % of tps you want exmple : 2% and 5% and 10% etc up to 5 Tp's
+* **Risk-Reward Ratio** , it calculate your profit automaticlly using the value of the stoploss used in the trade .. 
+
+**Default RR is 1 to 2.4 RR so you lose 1 dollar to earn $2.4
+**
 
 
 there are 2 different scripts 

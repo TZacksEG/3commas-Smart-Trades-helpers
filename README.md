@@ -38,7 +38,7 @@ The Take profit matter has 2 options
 there are 2 different scripts 
 * **Smart_Trade_fixed_TPs.py**
 * **Smart_Trade_with_RR.py**
-
+**********************
 # Smart_Trade_fixed_TPs
  when you run it , it will ask fo data as shown below 
  ![image](https://user-images.githubusercontent.com/106902748/194078254-f2db452d-9c09-49bf-8cb2-e92f399d61f0.png)

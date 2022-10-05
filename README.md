@@ -5,7 +5,7 @@ Most of us fail in Crypto Day Trading Due to Bad risk management.
 therefore, these Scripts were created 
 
 # How it works?
-I have designed these scripts to risk a certain amount per trade depend on your capital and also adjust the position value depend on your stoploss 
+I have designed these scripts to risk a certain amount per trade depend on the Trading capital and also adjust the position value depend on your stoploss 
 works for spot and futures **ONLY USDT Market**
 
 # Explaination 

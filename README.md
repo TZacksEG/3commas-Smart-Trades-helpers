@@ -34,6 +34,7 @@ The Take profit matter has 2 options
 
 **Default RR is 1 to 2.4 RR so you lose 1 dollar to earn $2.4**
 
+**BOTH OF the script will Breakeven when first Tp is Reached to secure your Profit **
 
 there are 2 different scripts 
 * **Smart_Trade_fixed_TPs.py** buys or sell at **MARKET PRICE**
@@ -79,5 +80,32 @@ stoploss`
 ![image](https://user-images.githubusercontent.com/106902748/194093614-9ef1983f-752e-4128-b039-0d8733bc7bb8.png)
 
 You can use CLOSE to close/Panic Sell  all your SMART trades
+
+**********************
+**********************
+# Smart_Trade_with_RR ( RISK and REWARD )
+once you run it via 
+python3 smart_trade_with_RR.py
+
+it will create an INI file which needs data 
+
+![image](https://user-images.githubusercontent.com/106902748/194098802-a50e3c9b-8a7d-4c0d-b45b-876031362bd5.png)
+
+same data as the previous script except the following 
+
+* **risk-per-trade** =  100 -- in this script it asks for how much you will to risk per trade in Dollar value example $100
+* **risk_reward-1** = 1.0 -- your first TP is 1:1 Risk Reward Ratio 
+* **risk_reward-2** = 2.4 -- your 2nd TP is 1:2.4 Risk Reward Ratio 
+* **vol1** = 2.0 -- how much volume of your position will you sell at the first TP 
+* **vol2** = 98.0  how much volume of your position will you sell at the 2nd TP 
+* **break_even** = True  - when reaching the first TP , do you want to move your stop loss to Breakeven ?! True for yes or False for NO
+
+
+
+
+
+
+
+
 
 

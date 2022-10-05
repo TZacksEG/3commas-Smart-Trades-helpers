@@ -6,7 +6,7 @@ therefore, these Scripts were created
 ******************
 # How it works?
 I have designed these scripts to risk a certain amount per trade depend on the Trading capital and also adjust the position value depend on your stoploss 
-works for spot and futures **ONLY USDT Market** also has multi Tps or Risk-Reward Ratio and Breakeven when first Tp is Reached to secure your Profit .
+works for spot and futures **ONLY USDT Market**  ( LONG and SHORT ) also has multi Tps or Risk-Reward Ratio and Breakeven when first Tp is Reached to secure your Profit .
 
 # Explaination 
 
@@ -66,5 +66,15 @@ The configuration file for Smart_Trade_fixed_TPs has the following settings:
 * **tgram-channel** - name of the chat channel to monitor and send trades to
 * **notifications** - set to true to enable notifications. (default = False) [How to setup telegram Notifications](https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/How-to-setup-telegram-Notifications)
 * **notify-urls** - one or a list of apprise notify urls, each in " " seperated with commas. See [Apprise website](https://github.com/caronc/apprise) for more information.
+
+**********************
+# Smart_Trade_fixed_TPs Format
+
+`LONG/SHORT
+COIN
+stoploss`
+![image](https://user-images.githubusercontent.com/106902748/194093614-9ef1983f-752e-4128-b039-0d8733bc7bb8.png)
+
+You can use CLOSE to close all your SMART trades
 
 

@@ -49,7 +49,8 @@ The configuration file for Smart_Trade_fixed_TPs has the following settings:
 * **timezone** - timezone. (default is 'Africa/Cairo')
 * **debug** - set to true to enable debug logging to file. (default is False)
 * **logrotate** - number of days to keep logs. (default = 7)
-* **3c-apikey** - your 3Commas API key value.
+* **3c-apikey** - your 3Commas API key value. [How to Create a 3commas API ?](https://help.3commas.io/en/articles/5599671-3commas-api-creating-an-api-key-for-development)
+
 * **3c-apisecret** - your 3Commas API key secret value.
 * **accounts** = your account/accounts number [how to get the account number?](https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/How-to-get-exchange-account-number-from-3commas)
 

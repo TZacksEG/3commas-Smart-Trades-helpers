@@ -72,7 +72,7 @@ The configuration file for Smart_Trade_fixed_TPs has the following settings:
 * **Tp5** - % of your 5th TP
 * **leverage** - are you going to use leverage Trading ? then what is your lev maybe 5 or 10 or 100? default is 1 for SPOT Trading
 * **tgram-phone-number** - your Telegram phone number, needed for first time authorisation code. (session will be cached in watchlist.session)
-* **tgram-api-id** - your telegram API id. [how to get Telegram App/HASH?]([https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/How-to-get-exchange-account-number-from-3commas](https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/Get-Telegram-APP-ID-and-HASH))
+* **tgram-api-id** - your telegram API id. [how to get Telegram App/HASH?](https://github.com/TZacksEG/3commas-Smart-Trades-helpers/wiki/Get-Telegram-APP-ID-and-HASH)
 * **tgram-api-hash** - your telegram API hash.
 * **tgram-channel** - name of the chat channel to monitor and send trades to
 * **notifications** - set to true to enable notifications. (default = False) [How to setup telegram Notifications](https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/How-to-setup-telegram-Notifications)

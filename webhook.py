@@ -25,7 +25,7 @@ def load_config():
         "timezone": "Africa/Cairo",
         "debug": False,
         "logrotate": 7,
-        "secret-key": "TradingView Secret Key for Webhook",
+        "secret-key": 877876,
         "LONG-bot": "Telegram BOT Token for LONG alerts",
         "LONG-channel": "Telegram Channel ID for LONG alerts ",
         "SHORT-bot": "Telegram BOT Token for SHORT alerts",
@@ -37,10 +37,10 @@ def load_config():
     return None
 
 
-def send_alert(cfg, data):
+def send_alert(data):
     msg = data["msg"].encode("latin-1", "backslashreplace").decode("unicode_escape")
     if "SHORT" in msg:
-        tg_bot = Bot(token=str(cfg.get("settings", "SHORT-bot")))
+        tg_bot = Bot(token=str(config.get("settings", "SHORT-bot")))
         msg = msg.replace("--", "\n")
         try:
             tg_bot.sendMessage(
@@ -51,13 +51,13 @@ def send_alert(cfg, data):
             print(get_timestamp(), f"Alert Received & Sent!")
         except KeyError:
             tg_bot.sendMessage(
-                int(cfg.get("settings", "SHORT-Channel")),
+                int(config.get("settings", "SHORT-Channel")),
                 msg,
                 # parse_mode="MARKDOWN",
             )
             print("[X]", get_timestamp(), "Alert Received & Refused! (Wrong Key)")
     elif "LONG" in msg:
-        tg_bot = Bot(token=str(cfg.get("settings", "LONG-bot")))
+        tg_bot = Bot(token=str(config.get("settings", "LONG-bot")))
         msg = msg.replace("--", "\n")
         try:
             tg_bot.sendMessage(
@@ -68,7 +68,7 @@ def send_alert(cfg, data):
             print(get_timestamp(), f"Alert Received & Sent!")
         except KeyError:
             tg_bot.sendMessage(
-                int(cfg.get("settings", "LONG-Channel")),
+                int(config.get("settings", "LONG-Channel")),
                 msg,
                 # parse_mode="MARKDOWN",
             )
@@ -81,8 +81,9 @@ def send_alert(cfg, data):
 
 
 # Start application
-program = Path(__file__).stem
 core = Flask(__name__)
+program = Path(__file__).stem
+
 # Parse and interpret options.
 parser = argparse.ArgumentParser(description="ZCrypto helpers.")
 parser.add_argument(
@@ -112,6 +113,7 @@ else:
 
 # Create or load configuration file
 config = load_config()
+secret = str(config.get("settings", "secret-key"))
 if not config:
     # Initialise temp logging
     print(
@@ -133,10 +135,11 @@ def webhook():
         if request.method == "POST":
             data = request.get_json()
             key = data["key"]
-            if key == int(config.get("settings", "secret-key")):
-                send_alert(config, data)
+            if key == secret:
+                send_alert(data)
                 return "Sent alert", 200
             else:
+
                 return "Refused alert", 400
 
     except Exception as e:
@@ -144,11 +147,11 @@ def webhook():
         return "Error", 400
 
 
-while True:
-    config = load_config()
-    print(f"Reloaded configuration from '{datadir}/{program}.ini'")
-    if __name__ == "__main__":
-        from waitress import serve
+config = load_config()
+print(f"Reloaded configuration from '{datadir}/{program}.ini'")
+if __name__ == "__main__":
+    from waitress import serve
+    print("Webhook Service Has been activated")
+    serve(core, host="0.0.0.0", port=80)
 
-        print("Webhook Service Has been activated")
-        serve(core, host="0.0.0.0", port=80)
+# TO DO

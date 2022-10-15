@@ -5,128 +5,79 @@ Most of us fail in Crypto Day Trading Due to Bad risk management.
 therefore, these Scripts were created 
 ******************
 # How it works?
-I have designed these scripts to risk a certain amount per trade depend on the Trading capital and also adjust the position value depend on your stoploss
-and contolled via Telegram ( open or CLOSE Trades )
+I have designed these scripts to risk a certain amount per trade with self adjusting position Size/value with 
+Risk-Reward Ratio or Multi Take profit levels system , **controlled via Telegram** 
 
-works for spot and futures **ONLY USDT Market**  ( LONG and SHORT ) also has multi Tps or Risk-Reward Ratio and Breakeven when first Tp is Reached to secure your Profit .
 
-# Explanation  
+Works for spot and futures **USDT Market ONLY**  ( LONG and SHORT ) with Break-even Feature.
 
-**capital** = $20K
 
-**risk per trade** = 1 % = $200 ( adjustable in the script ) risk whatever you want 
+# Explanation of The Money management Strategy
 
-assuming you entering a BTC long position with 5% stoploss 
+Assuming your **capital** is $20K  
 
-**Your Position value** will be calculated in that way ( risk per trade / Stoploss % ) so its 200/5% = **$4,000**
+if you enter a BTC long position with **5% stoploss** without any risk management you lose $1,000 . too big ?! if yes then here comes the Risk management part
 
-BTC would have to drop 5% in price to lose the **Risk Per trade value** which is in our case is **1% of the capital or $200**
+Your **risk per trade** = 1% of capital  = $200
 
-but if you LONG BTC with stoploss of 2% 
+**Your Position value** will be calculated and adjusted to match your stoploss USD value so your Position value will be  = **$4,000**
 
-**Your Position value** will be calculated in that way ( risk per trade / Stoploss % ) so its 200/2% = **$10,000**
+BTC would need to drop 5% in price value in order to lose the **Risk Per trade value** which is in our case is **1% of the capital = $200**
 
-BTC would have to drop 2% in price to lose the **Risk Per trade value** which is in our case is **1% of the capital or $200**
+**so your risk USD value per trade stays the same , no matter how small/big your stoploss is**
 
-**so your risk amount per trade stays the same , no matter how small/big stoploss you use**
+and SO ON . 
 
-The Take profit matter has 2 options 
-* **Fixed Tps** ( adjustable in the script ) you can set whatever % of tps you want exmple : 2% and 5% and 10% etc up to 5 Tp's
-* **Risk-Reward Ratio** , it calculate your profit automaticlly using the value of the stoploss used in the trade .. 
+*****************************
 
-**Default RR is 1 to 2.4 RR so you lose 1 dollar to earn $2.4**
+# Take profit
 
-**BOTH OF the scripts will Breakeven when first Tp is Reached to secure your Profit**
+**We have 2 Scripts with different Take profit strategies**
+* **Fixed Tps** which is **Smart_Trade_fixed_TPs.py** Fixed % of Tps (adjustable) .
 
-there are 2 different scripts 
-* **Smart_Trade_fixed_TPs.py** buys or sell at **MARKET PRICE**
-* **Smart_Trade_with_RR.py** Buys or sell at **limit PRICE**
+  you can set whatever % of tps you want: 2% and 5% and 10% Up to 5 TP's levels. 
+
+
+* **Risk-Reward Ratio** which is **Smart_Trade_with_RR.py** RR Strategy. 
+
+  it calculates your profit automatically using the value of the stoploss used in the trade.
+
+  **Default RR is 1 to 2.4 RR, so you lose 1 dollar to earn $2.4**
+
+**BOTH OF the scripts have a Break-even feature which will automatically MOVE your Stoploss level to entry when first TP is Reached**
+
+
 **********************
+
+# How to use?
+* if you want to run the whole operation automatically 
+  - where you automatically send  alerts to it from Tradingview 
+  to your Telegram Channel and then Telegram to **3commas**
+  - then you need to have your own webhook server to manage the whole automation 
+  - [Install Webhook Server](https://github.com/TZacksEG/3commas-Smart-Trades-helpers/wiki/Personal-Webhook-Setup) 
+
+
+* if you want to run the smart Trades manually by sending yourself the Trades to Telegram
+  - Just Send Trades manually to the Telegram Channel , where it will send your Trades to 3commas Automaticlly 
+    
+
+* Scripts
+  - [Smart_Trade_fixed_TPs](https://github.com/TZacksEG/3commas-Smart-Trades-helpers/wiki/Smart-Trade-with-Fixed-TP's-level)
+  - [Smart_Trade_with_RR ( RISK and REWARD )](https://github.com/TZacksEG/3commas-Smart-Trades-helpers/wiki/Smart-Trades-with-RR-(-RISK-and-REWARD-))
+  
+
+# 
+
+**********************
+**********************
+# 
+
 # Installation
 
-need python3.7 or higher 
-
+* Get a VPS i recommend  [Contabo.com](https://contabo.com/en/)
+* need python3.7 or higher
 * pip install -r requirements.txt
-* python3 Smart_Trade_fixed_TPs.py OR python3 Smart_Trade_with_RR.py
-
-
-# Smart_Trade_fixed_TPs
- when you run it , it will ask fo data as shown below 
- ![image](https://user-images.githubusercontent.com/106902748/194078254-f2db452d-9c09-49bf-8cb2-e92f399d61f0.png)
- 
-**Configuration**
-The configuration file for Smart_Trade_fixed_TPs has the following settings:
-
-* **timezone** - timezone. (default is 'Africa/Cairo')
-* **debug** - set to true to enable debug logging to file. (default is False)
-* **logrotate** - number of days to keep logs. (default = 7)
-* **3c-apikey** - your 3Commas API key value. [How to Create a 3commas API ?](https://help.3commas.io/en/articles/5599671-3commas-api-creating-an-api-key-for-development)
-
-* **3c-apisecret** - your 3Commas API key secret value.
-* **accounts** = your account/accounts number [how to get the account number?](https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/How-to-get-exchange-account-number-from-3commas)
-* **risk-of-trade** - the % of your account balance that you will risk for each trade - default is 1%
-* **Tp1** - % of your 1st TP
-* **Tp2** - % of your 2nd TP
-* **Tp3** - % of your 3rd TP
-* **Tp4** - % of your 4th TP
-* **Tp5** - % of your 5th TP
-* **leverage** - are you going to use leverage Trading ? then what is your lev maybe 5 or 10 or 100? default is 1 for SPOT Trading
-* **tgram-phone-number** - your Telegram phone number, needed for first time authorisation code. (session will be cached in watchlist.session)
-* **tgram-api-id** - your telegram API id. [how to get Telegram App/HASH?](https://github.com/TZacksEG/3commas-Smart-Trades-helpers/wiki/Get-Telegram-APP-ID-and-HASH)
-* **tgram-api-hash** - your telegram API hash.
-* **tgram-channel** - name of the chat channel to monitor and send trades to
-* **notifications** - set to true to enable notifications. (default = False) [How to setup telegram Notifications](https://github.com/TZEG/3commas-Smart-Trades-helpers/wiki/How-to-setup-telegram-Notifications)
-* **notify-urls** - one or a list of apprise notify urls, each in " " seperated with commas. See [Apprise website](https://github.com/caronc/apprise) for more information.
-
-**********************
-# Smart_Trade_fixed_TPs Format
-
-`LONG/SHORT
-
-COIN
-
-stoploss`
-
-![image](https://user-images.githubusercontent.com/106902748/194093614-9ef1983f-752e-4128-b039-0d8733bc7bb8.png)
-
-**You can use CLOSE to close/Panic Sell  all your SMART trades**
-**********************
-**********************
-# Smart_Trade_with_RR ( RISK and REWARD )
-**Risk-Reward Ratio** , it calculate your profit automatically using the value of the stoploss used in the trade ..
-
-**Default RR is 1 to 2.4 RR so you lose 1 dollar to earn $2.4**
-
-once you run it via 
-python3 smart_trade_with_RR.py
-
-it will create an INI file which needs data 
-
-![image](https://user-images.githubusercontent.com/106902748/194098802-a50e3c9b-8a7d-4c0d-b45b-876031362bd5.png)
-
-same data as the previous script except the following 
-
-* **risk-per-trade** =  100 -- in this script it asks for how much you will to risk per trade in Dollar value example $100
-* **risk_reward-1** = 1.0 -- your first TP is 1:1 Risk Reward Ratio 
-* **risk_reward-2** = 2.4 -- your 2nd TP is 1:2.4 Risk Reward Ratio 
-* **vol1** = 2.0 -- how much volume of your position will you sell at the first TP 
-* **vol2** = 98.0  how much volume of your position will you sell at the 2nd TP 
-* **break_even** = True  - when reaching the first TP , do you want to move your stop loss to Breakeven ?! True for yes or False for NO
-
-
-# Smart_Trade_with_RR FORMAT 
-
-`LONG/SHORT
-
-COIN
-
-entry price ( limit ) 
-
-stoploss`
-
-
-![image](https://user-images.githubusercontent.com/106902748/194100563-9fc584ce-0a27-443b-9f5c-57137ee61276.png)
-
-
-**You can use CLOSE to close/Panic Sell all your SMART trades**
-
+* **python3 Smart_Trade_fixed_TPs.py** 
+* OR
+* **python3 Smart_Trade_with_RR.py**
+* **if Webhook is Needed then python3 webhook.py**

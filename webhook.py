@@ -113,7 +113,6 @@ else:
 
 # Create or load configuration file
 config = load_config()
-secret = str(config.get("settings", "secret-key"))
 if not config:
     # Initialise temp logging
     print(
@@ -135,7 +134,7 @@ def webhook():
         if request.method == "POST":
             data = request.get_json()
             key = data["key"]
-            if key == secret:
+            if key == str(config.get("settings", "secret-key")):
                 send_alert(data)
                 return "Sent alert", 200
             else:
@@ -147,11 +146,13 @@ def webhook():
         return "Error", 400
 
 
-config = load_config()
-print(f"Reloaded configuration from '{datadir}/{program}.ini'")
-if __name__ == "__main__":
-    from waitress import serve
-    print("Webhook Service Has been activated")
-    serve(core, host="0.0.0.0", port=80)
+while True:
+    config = load_config()
+    print(f"Reloaded configuration from '{datadir}/{program}.ini'")
+    if __name__ == "__main__":
+        from waitress import serve
+
+        print("Webhook Service Has been activated")
+        serve(core, host="0.0.0.0", port=80)
 
 # TO DO

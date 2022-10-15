@@ -33,12 +33,12 @@ and SO ON .
 # Take profit
 
 **We have 2 Scripts with different Take profit strategies**
-* **Fixed Tps** which is **Smart_Trade_fixed_TPs.py** Fixed % of Tps (adjustable) .
+* **Fixed Tps** which is [Smart_Trade_fixed_TPs.py](https://github.com/TZacksEG/3commas-Smart-Trades-helpers/wiki/Smart-Trade-with-Fixed-TP's-level) Fixed % of Tps (adjustable) .
 
   you can set whatever % of tps you want: 2% and 5% and 10% Up to 5 TP's levels. 
 
 
-* **Risk-Reward Ratio** which is **Smart_Trade_with_RR.py** RR Strategy. 
+* **Risk-Reward Ratio** which is [Smart_Trade_with_RR.py](https://github.com/TZacksEG/3commas-Smart-Trades-helpers/blob/main/Smart_Trade_with_RR.py) RR Strategy. 
 
   it calculates your profit automatically using the value of the stoploss used in the trade.
 

@@ -45,7 +45,6 @@ numpy==1.23.1
 lunarcrush~=1.0.1
 pathlib~=1.0.1
 plotly~=5.9.0
-regex~=2022.3.2
 tronpy~=0.2.6
 python-dateutil~=2.8.2
 

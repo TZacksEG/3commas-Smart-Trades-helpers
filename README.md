@@ -69,13 +69,13 @@ and SO ON .
 # 
 
 **********************
-**********************
 # 
 
 # Installation
 
 * Get a VPS i recommend  [Contabo.com](https://contabo.com/en/)
 * need python3.7 or higher
+* git clone https://github.com/TZacksEG/3commas-Smart-Trades-helpers.git
 * pip install -r requirements.txt
 * **python3 Smart_Trade_fixed_TPs.py** 
 * OR

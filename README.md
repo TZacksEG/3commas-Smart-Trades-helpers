@@ -51,7 +51,7 @@ and SO ON .
 
 # How to use?
 * if you want to run the whole operation automatically 
-  - where you automatically send  alerts to it from Tradingview 
+  - BY automatically Open trades Via sending alerts from Tradingview 
   to your Telegram Channel and then Telegram to **3commas**
   - then you need to have your own webhook server to manage the whole automation 
   - [Install Webhook Server](https://github.com/TZacksEG/3commas-Smart-Trades-helpers/wiki/Personal-Webhook-Setup) 

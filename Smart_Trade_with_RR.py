@@ -83,7 +83,7 @@ def smart_trade(cfg, side, pair, price, inputstoploss):
     if side == "CLOSE":
         panic_close_smart(config, logger, api, get_active_smart_trades(config, logger, api))
     else:
-        if side == "SELL":
+        if side == "SHORT":
             types = "sell"
             if stop:
                 stoploss = 0
@@ -204,7 +204,7 @@ async def callback(event):
 
     trigger = event.raw_text.splitlines()
 
-    if trigger[0] == "LONG" or trigger[0] == "SELL" or trigger[0] == "CLOSE":
+    if trigger[0] == "LONG" or trigger[0] == "SHORT" or trigger[0] == "CLOSE":
         try:
             if trigger[0] == "CLOSE":
                 coin = "BNB"
@@ -219,7 +219,7 @@ async def callback(event):
 
         except IndexError:
             logger.info("--- Invalid trigger message format! ---\n\nMessage format "
-                        "LONG/SELL\n"
+                        "LONG/SHORT\n"
                         "COIN\n"
                         "PRICE\n"
                         "STOPLOSS\n"
@@ -235,7 +235,7 @@ async def callback(event):
             return
         except ValueError:
             logger.info("--- Invalid trigger message format! ---\n\nMessage format "
-                        "LONG/SELL\n"
+                        "LONG/SHORT\n"
                         "COIN\n"
                         "PRICE\n"
                         "STOPLOSS\n"
@@ -250,12 +250,12 @@ async def callback(event):
                         )
             return
 
-        if trigger[0] not in ('LONG', 'SELL', 'CLOSE'):
+        if trigger[0] not in ('LONG', 'SHORT', 'CLOSE'):
             logger.debug(f"Trade type '{trigger[0]}' is not supported yet!")
             return
     else:
         logger.info("--- Not a crypto trigger message ---\n\nMessage format "
-                    "LONG/SELL\n"
+                    "LONG/SHORT\n"
                     "COIN\n"
                     "PRICE\n"
                     "STOPLOSS "

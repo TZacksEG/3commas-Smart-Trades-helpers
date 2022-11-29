@@ -46,6 +46,8 @@ and SO ON .
 
 **BOTH OF the scripts have a Break-even feature which will automatically MOVE your Stoploss level to entry when first TP is Reached**
 
+**Trailing  TP has been added to the last TP value in Fixed TP's Scripts**
+
 
 **********************
 

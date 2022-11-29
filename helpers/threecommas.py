@@ -690,7 +690,7 @@ def update_smart_trades(cfg, logger, api, accountid, notify=True, notify_uptodat
     return None
 
 
-def smart_spot_trades(cfg, logger, api, pair, posvalue, accountid, stoploss, tp1, tp2, tp3, tp4, tp5, notify=True,
+def smart_spot_trades(cfg, logger, api, pair, posvalue, accountid, stoploss, tp1, tp2, tp3, tp4, tp5, true=True, notify=True,
                       notify_uptodate=True):
     """Get all data for an account."""
     # Fetch all account data, in real mode
@@ -748,7 +748,11 @@ def smart_spot_trades(cfg, logger, api, pair, posvalue, accountid, stoploss, tp1
                             "value": tp5,
                             "type": "bid"
                         },
-                        "volume": 20
+                        "volume": 20,
+                        "trailing": {
+                            "enabled": true,
+                            "percent": float(cfg.get("settings", "trailing-percent"))
+                        }
                     }
                 ]
             },
@@ -842,7 +846,11 @@ def smart_lev_trades(cfg, logger, api, pair, posvalue, lev, accountid, side, sto
                             "value": tp5,
                             "type": "bid"
                         },
-                        "volume": 20
+                        "volume": 20,
+                        "trailing": {
+                            "enabled": true,
+                            "percent": float(cfg.get("settings", "trailing-percent"))
+                        }
                     }
                 ]
             },

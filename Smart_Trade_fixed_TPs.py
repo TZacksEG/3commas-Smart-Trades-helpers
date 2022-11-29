@@ -41,6 +41,7 @@ def load_config():
         "tp3": 7.5,
         "tp4": 10.0,
         "tp5": 12.0,
+        "trailing-percent": 10.5,
         "leverage": 1,
     }
     cfg["telegram"] = {

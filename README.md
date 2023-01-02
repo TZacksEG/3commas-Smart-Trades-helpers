@@ -83,3 +83,7 @@ and SO ON .
 * OR
 * **python3 Smart_Trade_with_RR.py**
 * **if Webhook is Needed then python3 webhook.py**
+
+Need Help ?!
+
+join discord : https://discord.com/invite/as3yHDugHE

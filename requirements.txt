@@ -29,7 +29,7 @@ slack-webhook==1.0.7
 toml==0.10.2
 tornado==6.4.1
 tzlocal==4.2
-waitress==2.1.2
+waitress==3.0.1
 Werkzeug==2.3.8
 binance==0.3
 colorama~=0.4.5
